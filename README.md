@@ -2,15 +2,16 @@ Project_Sigma
 =============
 Last Update:
 11-19-2013
+
+
+Team Members:
 =============
-
-TEAM MEMBERS:
-
 Thang Tran
 Erica Putsche
 Kirsten Grace
 Keith Lueneburg
 
+Info
 =============
 
 Basic statistics program.
