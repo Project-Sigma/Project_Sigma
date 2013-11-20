@@ -7,9 +7,13 @@ Last Update:
 Team Members:
 =============
 Thang Tran
+
 Erica Putsche
+
 Kirsten Grace
+
 Keith Lueneburg
+
 
 Info
 =============
