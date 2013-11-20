@@ -1,5 +1,15 @@
 package test;
 
+
+/*
+ * Class: Test_GraphicsFrame
+ * Author: Keith Lueneburg
+ *         Project Sigma
+ * Last Update: 11/19/2013  
+ * 
+ * Test driver for GraphicsFrame class. Sends a frame with a simple drawing to the frame.
+ * 
+ */
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -9,6 +19,7 @@ import javax.swing.JPanel;
 import view.GraphicsFrame;
 
 public class Test_GraphicsFrame {
+	
 	public static void main(String[] args) {
 		JPanel p = new JPanel() {
 			public String getName(){

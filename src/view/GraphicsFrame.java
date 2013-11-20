@@ -10,6 +10,7 @@ import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.io.File;
+import java.util.Set;
 import java.util.TreeSet;
 
 import javax.imageio.ImageIO;
@@ -22,6 +23,19 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileFilter;
+
+/*
+ * Class: GraphicsFrame
+ * Author: Keith Lueneburg
+ *         Project Sigma
+ * Last Update: 11/19/2013  
+ * 
+ * JFrame subclass for displaying a JPanel with graphics/drawing. Can save to 
+ * image file types determined at runtime by Java's ImageIO.
+ * 
+ * Ideas/Not Fully Implemented:
+ *     -Print displayed graphics directly from program. **IN PROGRESS**
+ */
 
 public class GraphicsFrame extends JFrame implements Printable {
 	// reference to this frame for inner classes
@@ -162,13 +176,11 @@ public class GraphicsFrame extends JFrame implements Printable {
 
 			String[] formatNames = ImageIO.getWriterFormatNames();
 
-			TreeSet<String> formatNameSet = new TreeSet();
+			Set<String> formatNameSet = new TreeSet<String>();
 
 			for (String s : formatNames) {
 				formatNameSet.add(s.toLowerCase());
 			}
-
-			TreeSet<FileFilter> fileFilters = new TreeSet();
 
 			for (final String s : formatNameSet) {
 				chooser.addChoosableFileFilter(new FileFilter() {
@@ -181,7 +193,6 @@ public class GraphicsFrame extends JFrame implements Printable {
 						if (file.getName().toLowerCase().endsWith("." + description)) {
 							result = true;
 						}
-
 						return result;
 					}
 
